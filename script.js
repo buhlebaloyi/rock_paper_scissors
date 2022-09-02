@@ -70,17 +70,16 @@ function rockPaperScissors(player_one, player_two){
 }
 
 function gameInput(){
-    let multiPlayer = prompt("Press 1 for single player and press 2 for two player")
+    let multiPlayer = prompt("Press 1 for single player and press 2 for two player");
     console.log(typeof multiPlayer);
-    console.log(multiPlayer);
     if (multiPlayer === "1"){
         let player_one = prompt("User one, please enter a value between rock, paper and scissors.");
         let player_two = getComputerChoice();
-        return [player_one, player_two];
+        return [player_one.toLowerCase(), player_two.toLowerCase()];
     } else if (multiPlayer === "2"){
         let player_one = prompt("User one, please enter a value between rock, paper and scissors.");
         let player_two = prompt("User two, please enter a value between rock, paper and scissors.");
-        return [player_one, player_two];
+        return [player_one.toLowerCase(), player_two.toLowerCase()];
     } else {
         alert("Invalid input. Game over.");
     }
@@ -99,7 +98,7 @@ function playGame(){
         player_one = inputsToGame[0];
         player_two = inputsToGame[1];
 
-        if (player_one.toLowerCase() === "rock" || player_one.toLowerCase() === "scissors" || player_one.toLowerCase() === "rock"){
+        if (player_one === "rock" || player_one === "paper" || player_one === "scissors"){
             rockPaperScissors(player_one, player_two);
             break;
         } else {

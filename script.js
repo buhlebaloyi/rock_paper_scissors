@@ -1,3 +1,16 @@
+// computer choice
+function getComputerChoice(){
+    let randomPick = Math.floor(Math.random()*10);
+
+    if (randomPick <= 3){
+        return "rock";
+    } else if (randomPick > 3 && randomPick <= 6){
+        return "paper";
+    } else {
+        return "scissors";
+    }
+}
+
 /*
     The rock paper scissors game.
     The game is works as follows

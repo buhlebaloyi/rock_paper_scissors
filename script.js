@@ -91,7 +91,7 @@ function gameInput(){
         return error and ask for input again
 */
 
-function playGame(){
+function playRound(){
 
     while (true){
         inputsToGame = gameInput();
@@ -108,4 +108,4 @@ function playGame(){
     }
 }
 
-playGame();
+playRound();

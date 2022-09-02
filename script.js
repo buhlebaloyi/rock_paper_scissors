@@ -11,6 +11,7 @@ function getComputerChoice(){
     }
 }
 
+
 /*
     The rock paper scissors game.
     The game is works as follows

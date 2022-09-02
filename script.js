@@ -81,6 +81,8 @@ function gameInput(){
         let player_one = prompt("User one, please enter a value between rock, paper and scissors.");
         let player_two = prompt("User two, please enter a value between rock, paper and scissors.");
         return [player_one, player_two];
+    } else {
+        alert("Invalid input. Game over.");
     }
 }
 /* Checking if user input is valid
@@ -97,7 +99,7 @@ function playGame(){
         player_one = inputsToGame[0];
         player_two = inputsToGame[1];
 
-        if (player_one.toLocaleLowerCase() === "rock" || player_one.toLocaleLowerCase() === "scissors" || player_one.toLocaleLowerCase() === "rock"){
+        if (player_one.toLowerCase() === "rock" || player_one.toLowerCase() === "scissors" || player_one.toLowerCase() === "rock"){
             rockPaperScissors(player_one, player_two);
             break;
         } else {

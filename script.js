@@ -98,7 +98,7 @@ function playRound(){
         player_one = inputsToGame[0];
         player_two = inputsToGame[1];
 
-        if (player_one === "rock" || player_one === "paper" || player_one === "scissors"){
+        if ((player_one === "rock" || player_one === "paper" || player_one === "scissors") && (player_two === "rock" || player_two === "paper" || player_two === "scissors")){
             rockPaperScissors(player_one, player_two);
             break;
         } else {
@@ -108,4 +108,6 @@ function playRound(){
     }
 }
 
-playRound();
+function game(){
+    playRound();
+}

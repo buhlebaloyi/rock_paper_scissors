@@ -70,11 +70,18 @@ function rockPaperScissors(player_one, player_two){
 }
 
 function gameInput(){
-    let player_one = prompt("User one, please enter a value between rock, paper and scissors.");
-    let player_two = prompt("User two, please enter a value between rock, paper and scissors.");
-    return [player_one, player_two];
-}
+    let multiPlayer = prompt("Press 1 for single player and press 2 for two player")
 
+        if (multiPlayer === "1"){
+            let player_one = prompt("User one, please enter a value between rock, paper and scissors.");
+            let player_two = prompt("User two, please enter a value between rock, paper and scissors.");
+            return [player_one, player_two];
+        } else if (multiPlayer === "2"){
+            let player_one = prompt("User one, please enter a value between rock, paper and scissors.");
+            let player_two = getComputerChoice();
+            return [player_one, player_two];
+        }
+}
 /* Checking if user input is valid
     if user input is valid
         continue running  game

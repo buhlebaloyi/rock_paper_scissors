@@ -144,7 +144,7 @@ function game(){
     } else if (noWinsPlayer1 < noWinsPlayer2){
         alert("Player two won round.");
     } else {
-        alert("Players drawn.")
+        alert("Players drawn games.")
     }
 }
 

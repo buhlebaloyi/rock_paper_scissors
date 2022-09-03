@@ -129,10 +129,18 @@ function playRound(){
 }
 
 function game(){
+    let noWinsPlayer1 = 0;
+    let noWinsPlayer2 = 0;
     for (let i = 0; i < 5; i++){
         winner = playRound();
-    }
+        if (winner === "players have drawn game."){
+            noWinsPlayer1 = noWinsPlayer1 + 1;
+        } else if (winner === "players have drawn game.") {
+            noWinsPlayer2 = noWinsPlayer2 + 1;
+        } else {
 
+        }
+    }
 }
 
 game();

@@ -46,26 +46,26 @@ function getComputerChoice(){
 
 function rockPaperScissors(player_one, player_two){
     if (player_one === player_two){
-        console.log("players have drawn game.");
         alert("players have drawn game.");
+        return "players have drawn game.";
     } else if (player_one === "rock" && player_two === "scissors"){
-        console.log("player one wins.");
         alert("player one wins.");
+        return "player one wins.";
     } else if (player_one === "rock" && player_two === "paper"){
-        console.log("player two wins.");
         alert("player two wins.");
+        return "player two wins.";
     } else if (player_one === "paper" && player_two === "scissors"){
-        console.log("player two wins.");
         alert("player two wins.");
+        return "player two wins.";
     } else if (player_one === "paper" && player_two === "rock"){
-        console.log("player one wins.");
         alert("player one wins.");
+        return "player one wins.";
     } else if (player_one === "scissors" && player_two === "paper"){
-        console.log("player one wins.");
         alert("player one wins.");
+        return "player one wins.";
     } else if (player_one === "scissors" && player_two === "rock"){
-        console.log("player two wins.");
         alert("player two wins.");
+        return "player two wins.";
     }
 }
 
@@ -109,5 +109,10 @@ function playRound(){
 }
 
 function game(){
-    playRound();
+    for (let i = 0; i < 5; i++){
+        playRound();
+    }
+
 }
+
+game();

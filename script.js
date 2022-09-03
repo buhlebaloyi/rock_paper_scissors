@@ -69,6 +69,24 @@ function rockPaperScissors(player_one, player_two){
     }
 }
 
+function rockPaperScissorsOut(player_one, player_two){
+    if (player_one === player_two){
+        return "players have drawn game.";
+    } else if (player_one === "rock" && player_two === "scissors"){
+        return "player one wins.";
+    } else if (player_one === "rock" && player_two === "paper"){
+        return "player two wins.";
+    } else if (player_one === "paper" && player_two === "scissors"){
+        return "player two wins.";
+    } else if (player_one === "paper" && player_two === "rock"){
+        return "player one wins.";
+    } else if (player_one === "scissors" && player_two === "paper"){
+        return "player one wins.";
+    } else if (player_one === "scissors" && player_two === "rock"){
+        return "player two wins.";
+    }
+}
+
 function gameInput(){
     let multiPlayer = prompt("Press 1 for single player and press 2 for two player");
     console.log(typeof multiPlayer);
@@ -100,6 +118,8 @@ function playRound(){
 
         if ((player_one === "rock" || player_one === "paper" || player_one === "scissors") && (player_two === "rock" || player_two === "paper" || player_two === "scissors")){
             rockPaperScissors(player_one, player_two);
+            winner = rockPaperScissorsOut(player_one, player_two);
+            return winner;
             break;
         } else {
             alert("Invalid input.");
@@ -110,7 +130,7 @@ function playRound(){
 
 function game(){
     for (let i = 0; i < 5; i++){
-        playRound();
+        winner = playRound();
     }
 
 }

@@ -90,6 +90,7 @@ function rockPaperScissorsOut(player_one, player_two){
 function gameInput(){
     let multiPlayer = prompt("Press 1 for single player and press 2 for two player");
     console.log(typeof multiPlayer);
+    
     if (multiPlayer === "1"){
         let player_one = prompt("User one, please enter a value between rock, paper and scissors.");
         let player_two = getComputerChoice();
@@ -110,7 +111,6 @@ function gameInput(){
 */
 
 function playRound(){
-
     while (true){
         inputsToGame = gameInput();
         player_one = inputsToGame[0];
@@ -139,12 +139,13 @@ function game(){
             noWinsPlayer2 = noWinsPlayer2 + 1;
         }
     }
+
     if (noWinsPlayer1 > noWinsPlayer2){
         alert("Player one won round.");
     } else if (noWinsPlayer1 < noWinsPlayer2){
         alert("Player two won round.");
     } else {
-        alert("Players drawn games.")
+        alert("Players drawn games.");
     }
 }
 

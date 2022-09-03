@@ -133,13 +133,18 @@ function game(){
     let noWinsPlayer2 = 0;
     for (let i = 0; i < 5; i++){
         winner = playRound();
-        if (winner === "players have drawn game."){
+        if (winner === "player one wins."){
             noWinsPlayer1 = noWinsPlayer1 + 1;
-        } else if (winner === "players have drawn game.") {
+        } else if (winner === "player two wins.") {
             noWinsPlayer2 = noWinsPlayer2 + 1;
-        } else {
-
         }
+    }
+    if (noWinsPlayer1 > noWinsPlayer2){
+        alert("Player one won round.");
+    } else if (noWinsPlayer1 < noWinsPlayer2){
+        alert("Player two won round.");
+    } else {
+        alert("Players drawn.")
     }
 }
 

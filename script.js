@@ -120,7 +120,6 @@ function playRound(){
             rockPaperScissors(player_one, player_two);
             winner = rockPaperScissorsOut(player_one, player_two);
             return winner;
-            break;
         } else {
             alert("Invalid input.");
             gameInput();

@@ -151,4 +151,12 @@ function game(){
     }
 }
 
+// creating event listener for buttons
+const btn = element.addEventListener("click", buttonFunction);
+
+function buttonFunction(){
+    console.log(btn);
+}
+
+
 game();
